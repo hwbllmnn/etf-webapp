@@ -104,6 +104,7 @@ public class EtfConfigController implements PropertyHolder {
 	private static final String ETF_CONFIG_PROPERTY_FILENAME = "etf-config.properties";
 	private static final String ETF_CONFIG_DIR_NAME = "config";
 	private static final String ETF_PARALLEL_EXECUTIONS = "etf.parallel";
+	private static final STRING ETF_QUEUE_SIZE = "etf.queue"
 
 	@Autowired
 	private ServletContext servletContext;
@@ -151,6 +152,8 @@ public class EtfConfigController implements PropertyHolder {
 			put(ETF_TESTDATA_DIR, "testdata");
 			put(ETF_TESTDATA_UPLOAD_DIR, "http_uploads");
 			put(ETF_PARALLEL_EXECUTIONS, ""+Runtime.getRuntime().availableProcessors());
+			put(ETF_QUEUE_SIZE,""+Runtime.getRuntime().availableProcessors()*3);
+
 		}
 	});
 
