@@ -224,8 +224,28 @@ public class TestRunController implements TestRunEventListener {
 		// 7,5 minutes
 		timer.scheduleAtFixedRate(timedExpiredItemsRemover, 450000, 450000);
 
-		MAX_PARALLEL_RUNS=etfConfig.getPropertyAsInt("etf.parallel");
-		MAX_QUEUE_SIZE=etfConfig.getPropertyAsInt("etf.queue");
+		String maxThreads = etfConfig.getProperty("etf.testruns.threads.max");
+		try {
+			MAX_PARALLEL_RUNS = Integer.parseInt(maxThreads);
+		}catch(NumberFormatException e) {
+			if("auto".equals(maxThreads)) {
+				MAX_PARALLEL_RUNS = Runtime.getRuntime().availableProcessors();
+			}
+			else {
+				throw new RuntimeException(maxThreads+" is not a valid value for etf.testruns.max.threads");
+			}
+		}
+		String maxQueues = etfConfig.getProperty("etf.testruns.queued.max");
+		try {
+			MAX_QUEUE_SIZE = Integer.parseInt(maxQueues);
+		}catch(NumberFormatException e) {
+			if("auto".equals(maxQueues)) {
+				MAX_QUEUE_SIZE = Runtime.getRuntime().availableProcessors() * 3;
+			}
+			else {
+				throw new RuntimeException(maxQueues+" is not a valid value for etf.testruns.max.queued");
+			}
+		}
 		taskPoolRegistry = new TaskPoolRegistry<>(MAX_PARALLEL_RUNS,MAX_PARALLEL_RUNS,MAX_QUEUE_SIZE);
 		
 		logger.info("Test Run controller initialized!");

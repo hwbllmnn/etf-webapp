@@ -103,8 +103,8 @@ public class EtfConfigController implements PropertyHolder {
 
 	private static final String ETF_CONFIG_PROPERTY_FILENAME = "etf-config.properties";
 	private static final String ETF_CONFIG_DIR_NAME = "config";
-	private static final String ETF_PARALLEL_EXECUTIONS = "etf.parallel";
-	private static final String ETF_QUEUE_SIZE = "etf.queue";
+	private static final String ETF_PARALLEL_EXECUTIONS = "etf.testruns.threads.max";
+	private static final String ETF_QUEUE_SIZE = "etf.testruns.queued.max";
 
 	@Autowired
 	private ServletContext servletContext;
