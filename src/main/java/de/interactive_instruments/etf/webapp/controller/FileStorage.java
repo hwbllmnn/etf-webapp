@@ -1,5 +1,9 @@
 /**
+<<<<<<< HEAD
  * Copyright 2017 European Union, interactive instruments GmbH
+=======
+ * Copyright 2017-2019 European Union, interactive instruments GmbH
+>>>>>>> 6d3cbaf1cf82a3977bb91ae03b16342d7a4f2417
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by
  * the European Commission - subsequent versions of the EUPL (the "Licence");
  * You may not use this work except in compliance with the Licence.
@@ -64,7 +68,11 @@ class FileStorage {
 		this.storageDir = destination;
 		this.tmpDir = tmpDir;
 		this.baseFilter = baseFilter;
+<<<<<<< HEAD
 		maxStorageSize = 10737418240L;
+=======
+		setMaxStorageSize(10737418240L);
+>>>>>>> 6d3cbaf1cf82a3977bb91ae03b16342d7a4f2417
 	}
 
 	/**

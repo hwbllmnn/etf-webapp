@@ -4,7 +4,10 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:tiles="http://www.thymeleaf.org"
       xmlns:og="http://opengraphprotocol.org/schema/"
+<<<<<<< HEAD
       lang="en"
+=======
+>>>>>>> 6d3cbaf1cf82a3977bb91ae03b16342d7a4f2417
       class="ui-mobile ui-mobile-rendering">
 
 <head>
@@ -24,6 +27,7 @@
     <meta property="og:description" content="ETF is an open source testing framework for validating spatial data, metadata and web services in Spatial Data Infrastructures" />
     <meta property="og:type" content="WebApplication" />
     <title th:text="${T(de.interactive_instruments.etf.webapp.helpers.View).brandingText}">BRANDING TEXT</title>
+<<<<<<< HEAD
     <!-- Opbeat for Javascript bug reports -->
     <!-- https://opbeat.com/docs/articles/get-started-with-javascript/ -->
     <script th:if="${T(de.interactive_instruments.etf.webapp.helpers.View).submitAnalysisData == 'true'}"
@@ -36,6 +40,8 @@
         _opbeat = window._opbeat || function() { (window._opbeat.q = window._opbeat.q || []).push(arguments) };
         _opbeat('config', { /* Configuration options */ });
     </script>
+=======
+>>>>>>> 6d3cbaf1cf82a3977bb91ae03b16342d7a4f2417
     <link rel="fluid-icon" th:href="@{/310x310.png}" th:title="${T(de.interactive_instruments.etf.webapp.helpers.View).brandingText}" />
     <link rel="mask-icon" th:href="@{/icon-mono.svg}" color="#000000" />
     <link rel="shortcut icon" th:href="@{/favicon.ico}" href="/favicon.ico" type="image/vnd.microsoft.icon" />
@@ -68,7 +74,11 @@
     <script data-main="js/main"
             src="js/lib/require.min.js"
             integrity="sha256-vuyY04PmJJxZwwbco4EPMyu4gE72DbbInyRaPG/Dlso="
+<<<<<<< HEAD
             crossorigin="anonymous">
+=======
+            crossorigin="use-credentials">
+>>>>>>> 6d3cbaf1cf82a3977bb91ae03b16342d7a4f2417
     </script>
 </head>
 
