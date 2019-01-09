@@ -55,6 +55,7 @@ define([
             this.monitorLogArea.text("Connecting to test runner and waiting for new messages...");
             this.currentLogPos = 0;
 
+<<<<<<< HEAD
             /*
             this.container.html(
                 this.template({ moment: moment,
@@ -82,6 +83,8 @@ define([
             */
 
 
+=======
+>>>>>>> 6d3cbaf1cf82a3977bb91ae03b16342d7a4f2417
             this.container.trigger('create');
             return this;
         },
@@ -161,7 +164,10 @@ define([
                             " a report or the internet connection to the web application has been lost!");
                         var e = new Error("Internal error occurred during test run: " + _this.monitorLogArea.val());
                         e.name = 'InternalTestRunError';
+<<<<<<< HEAD
                         // _opbeat('captureException', e);
+=======
+>>>>>>> 6d3cbaf1cf82a3977bb91ae03b16342d7a4f2417
                     }
                 }
             });

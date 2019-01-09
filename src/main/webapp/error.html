@@ -16,6 +16,7 @@
 
 <p th:if="${hint != null}" th:text="${hint}"></p>
 
+<<<<<<< HEAD
 <script th:if="${submitReport == true}" th:inline="javascript">
     /*<![CDATA[*/
     var exType = /*[[${ex.class.simpleName}]]*/ null;
@@ -28,6 +29,8 @@
 </script>
 
 
+=======
+>>>>>>> 6d3cbaf1cf82a3977bb91ae03b16342d7a4f2417
 <div th:if="${ex != null}">
 
     <p><b th:if="${ex.message}" th:text="${ex.message}">exception message...</b></p>
@@ -47,10 +50,13 @@
 <div th:if="${ex == null}">
     <p>Error logged</p>
 </div>
+<<<<<<< HEAD
 <div th:if="${submitReport == true}">
     <p>Error report submitted</p>
 </div>
 
+=======
+>>>>>>> 6d3cbaf1cf82a3977bb91ae03b16342d7a4f2417
 
 </body>
 </html>
