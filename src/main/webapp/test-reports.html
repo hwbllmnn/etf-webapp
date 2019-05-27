@@ -77,6 +77,10 @@
             <span th:text="#{l.Status}" >[[#{l.Status}]]</span>: <span><%= resStatus %></span>
         <% } %>
         <br/>
+		<% if(!_.isUndefined(testRun.testTasks.TestTask[0].ArgumentList.arguments.argument[0].$)){ %>
+			<span th:text="#{l.Tags}"> [[#{l.Tags}]]</span>: <span class="test-task-tags"><%= testRun.testTasks.TestTask[0].ArgumentList.arguments.argument[0].$ %></span>
+			<br />
+		<% } %>
         <%
             var testObject;
             var executableTestSuites =[];

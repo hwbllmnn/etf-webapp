@@ -184,12 +184,14 @@
             <span class="question" help="[[#{l.help.Label}]]"> ?</span>
         </label>
         <input data-inline="true" id="testRunLabel" type="text" title="[[#{l.help.Label}]]" value="<%= defaultLabel %>"/>
+		<label for="testRunTags">Tags</label>
+		<input data-inline="true" id="testRunTags" name="testRunTags" type="text" class="ets-parameter"></input>
     </div>
 
 
     <% if( serviceTest) { %>
         <div class="ui-field-contain">
-            <label for="serviceEndpoint">Service URL</label>
+            <label for="serviceEndpoint">Service URL</label> 
             <input class="testObjectResourceInput" data-validation="url" type="url" id="serviceEndpoint" value="http://"/>
         </div>
     <% } else { %>
