@@ -184,6 +184,7 @@
             <span class="question" help="[[#{l.help.Label}]]"> ?</span>
         </label>
         <input data-inline="true" id="testRunLabel" type="text" title="[[#{l.help.Label}]]" value="<%= defaultLabel %>"/>
+		
     </div>
 
 
@@ -216,7 +217,7 @@
             </div>
         </div>
     <% } %>
-
+	<label for="skip-manual"> Skip manual tests <input type="checkbox" id="skip-manual" class="ets-parameter" name="skipManualTests" value="true"/></label>
 
     <div id="start-tests-credentials" style="display: none">
         <h4>Credentials</h4>
