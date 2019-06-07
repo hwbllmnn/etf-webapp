@@ -77,10 +77,23 @@
             <span th:text="#{l.Status}" >[[#{l.Status}]]</span>: <span><%= resStatus %></span>
         <% } %>
         <br/>
-		<% if(!_.isUndefined(testRun.testTasks.TestTask[0].ArgumentList.arguments.argument[0].$)){ %>
-			<span th:text="#{l.Tags}"> [[#{l.Tags}]]</span>: <span class="test-task-tags"><%= testRun.testTasks.TestTask[0].ArgumentList.arguments.argument[0].$ %></span>
-			<br />
-		<% } %>
+        <%  var testTask = "";
+            if(Array.isArray(testRun.testTasks.TestTask)){
+                testTask = testRun.testTasks.TestTask[0];
+            }else{
+                testTask = testRun.testTasks.TestTask;
+            }
+
+            var tags = "";
+            if(Array.isArray(testTask.ArgumentList.arguments.argument)){
+                tags = testTask.ArgumentList.arguments.argument.filter((function(e){return e.name == "testRunTags"}))[0].$;
+            }else if(testTask.ArgumentList.arguments.argument.name == "testRunTags"){
+                tags = testTask.ArgumentList.arguments.argument.$
+            }
+        if(!_.isUndefined(tags)){ %>
+            <span th:text="#{l.Tags}"> [[#{l.Tags}]]</span>: <span class="test-task-tags"><%= tags %></span>
+            <br />
+        <% } %>
         <%
             var testObject;
             var executableTestSuites =[];
