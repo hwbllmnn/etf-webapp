@@ -226,7 +226,6 @@ define([
                         label = model.attributes.label;
                     }
                 });
-
                 var etslocal = {};
                 var etsremote = [];
                 var testObject = {};
@@ -285,35 +284,6 @@ define([
                 }
             },
 
-
-        home: function() {
-            console.log("Routing to Home");
-            this.changePage(this.homeView);
-        },
-
-        testObjects: function() {
-            console.log("Routing to Test Objects");
-            this.changePage(this.testObjectsView, null, this.testObjectsView.collection);
-        },
-
-        testReports: function() {
-            console.log("Routing to Test Reports");
-            this.changePage(this.testReportView, null, this.testReportView.collection);
-        },
-
-        removeTestObject: function(id) {
-            var _id = id.substring(3);
-            console.log("Opening dialog for removing Test Object "+_id+" ?");
-            var toCol = this.testObjectsView.collection;
-            var _this = this;
-            toCol.deferred.done(function() {
-                var testObject = toCol.get(_id);
-                if(_.isUndefined(testObject)) {
-                    toastr.error("Test Object with ID "+_id+" not found");
-                    _this.changePage(this.testObjectsView);
-                }else{
-                    _this.showDialog(_this.deleteTestObjectView, {
-                        targetObject: testObject,
 
             startTestsDialog: function (ids) {
                 var _this = this;
