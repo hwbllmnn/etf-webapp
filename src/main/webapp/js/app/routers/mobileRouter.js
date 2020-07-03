@@ -425,7 +425,7 @@ define([
         this._showDialog(page, options);
       } else {
         var _this = this;
-        console.log("Waiting for the collection %o", waitForCollection);
+        console.log("keep Waiting for collection %o", waitForCollection);
         waitForCollection.deferred.done(function() {
           _this._showDialog(page, options);
         });
