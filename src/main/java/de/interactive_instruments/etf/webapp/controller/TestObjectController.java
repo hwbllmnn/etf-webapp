@@ -188,8 +188,9 @@ public class TestObjectController implements PreparedDtoResolver<TestObjectDto> 
 
     private static class GmlAtomFilter implements FileContentFilterHolder {
         private ContentTypeFilter contentFilter = new ContentTypeFilter(
-                new String[]{"application/xml", "application/gml+xml", "application/atom+xml"});
-        private MultiFileFilter filenameFilter = new FilenameExtensionFilter(new String[]{".xml", ".gml"});
+        		new String[]{"application/xml", "application/gml+xml", "application/atom+xml", "text/html",
+                "application/json"});
+        private MultiFileFilter filenameFilter = new FilenameExtensionFilter(new String[]{".xml", ".gml", ".json", ".html"});
 
         public ContentTypeFilter content() {
             return this.contentFilter;
