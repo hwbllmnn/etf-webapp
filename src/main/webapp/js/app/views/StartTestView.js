@@ -98,7 +98,9 @@ define([
                 _.isUndefined(this.testObjectTypes['EID9981e87e-d642-43b3-ad5f-e77469075e74']) &&
                 _.isUndefined(this.testObjectTypes['EID380b969c-215e-46f8-a4e9-16f002f7d6c3']) &&
                 _.isUndefined(this.testObjectTypes['EIDae35f7cd-86d9-475a-aa3a-e0bfbda2bb5f']) &&
-                _.isUndefined(this.testObjectTypes['EID4b0fb35d-10f0-47df-bc0b-6d4548035ae2'])) {
+                _.isUndefined(this.testObjectTypes['EID4b0fb35d-10f0-47df-bc0b-6d4548035ae2']) &&
+                _.isUndefined(this.testObjectTypes['EID1e8c4f6d-c4f4-4e1c-bfc3-414469ce6910']) &&
+                _.isUndefined(this.testObjectTypes['EID373d2cc8-9c87-4224-a80a-007fb4c9abb3']) ) {
                 this.serviceTest = false;
             }else{
                 this.serviceTest = true;
